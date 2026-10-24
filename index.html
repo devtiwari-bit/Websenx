@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Websenx | Websites, Apps & Games by Dev Tiwari</title>
+<meta name="description" content="Websenx builds modern websites, web applications, browser games and digital tools for individuals, creators, startups and small businesses in India.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080D1B;--bg2:#0E1729;--card:#111D32;--a:#32BDF4;--a2:#78D9FF;--tx:#F4F7FF;--mu:#A8B5CA;--bd:rgba(150,190,230,.15);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:radial-gradient(900px 500px at 85% -5%,rgba(50,189,244,.14),transparent),var(--bg);color:var(--tx);font:400 16px/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Outfit,Manrope,sans-serif;line-height:1.12;margin:0 0 .5rem;font-weight:800;letter-spacing:-.025em}h1{font-size:clamp(2.1rem,7vw,3.7rem)}h2{font-size:clamp(1.7rem,5vw,2.5rem)}h3{font-size:1.15rem}
+p{margin:0 0 1rem;color:var(--mu)}a{color:inherit}.hl{color:var(--a);background:linear-gradient(90deg,#32BDF4,#9fe6ff,#7aa7ff,#32BDF4);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 6s linear infinite}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}section{padding:64px 0}.alt{background:rgba(14,23,41,.72)}main,footer{position:relative;z-index:1}
+.sub{max-width:60ch;margin-bottom:1.6rem}
+header{position:sticky;top:0;z-index:20;background:rgba(8,13,27,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}.nav img{height:34px;display:block}
+nav ul{display:none;list-style:none;margin:0;padding:0;gap:4px;align-items:center}nav a{text-decoration:none;padding:8px 11px;border-radius:99px;color:var(--mu);font-weight:600;font-size:.93rem}nav a:hover{color:var(--a2)}
+nav a.pill{background:var(--a);color:#06101f}
+#mb{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:10px;padding:9px 13px;font:inherit;cursor:pointer}
+nav.open ul{display:flex;flex-direction:column;align-items:stretch;position:absolute;left:0;right:0;top:68px;background:var(--bg2);padding:12px 20px 18px;border-bottom:1px solid var(--bd)}nav.open a{display:block;padding:13px}
+@media(min-width:960px){#mb{display:none}nav ul{display:flex}}
+.btn{display:inline-block;border:1px solid var(--a);background:var(--a);color:#06101f;padding:12px 22px;border-radius:99px;font:700 .95rem Manrope,sans-serif;text-decoration:none;cursor:pointer}
+.btn.s{background:transparent;color:var(--tx);border-color:var(--bd)}.btn:hover{filter:brightness(1.1);border-color:var(--a2)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,#mb:focus-visible{outline:3px solid var(--a2);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin:1.3rem 0}
+.hero{display:grid;gap:40px;align-items:center;padding:56px 0}@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr}}
+.tags{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--a2);font-weight:600;font-size:.92rem;padding:0;list-style:none;margin:0}
+.vis{position:relative;min-height:330px}.lap{background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.lap .b{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--bd)}.lap .b i{width:9px;height:9px;border-radius:50%;background:var(--a);opacity:.6}
+.lap .c{padding:18px}.lap img{height:26px;margin-bottom:12px}.bar{height:9px;border-radius:9px;background:var(--bd);margin:9px 0}.bar.x{background:var(--a);width:42%}
+.ph{position:absolute;right:-4px;bottom:-14px;width:112px;background:var(--bg2);border:2px solid var(--bd);border-radius:20px;padding:14px 10px;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+.chip{position:absolute;left:-6px;bottom:30px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;font-weight:700;font-size:.85rem;color:var(--a2)}
+.g{display:grid;gap:16px}@media(min-width:700px){.g{grid-template-columns:repeat(2,1fr)}}@media(min-width:980px){.g.t{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:rgba(120,217,255,.4)}
+.card p{flex:1}.card .row{margin:.4rem 0 0}.card .btn{padding:10px 16px;font-size:.88rem}
+.th{height:110px;border-radius:12px;margin-bottom:14px;display:grid;place-items:center;font:800 1.7rem Manrope;color:#06101f;background:linear-gradient(135deg,var(--a),#1b5fd1)}
+.st{display:inline-block;font-size:.78rem;font-weight:700;color:var(--a2);border:1px solid var(--bd);border-radius:99px;padding:2px 10px;margin-bottom:8px;align-self:flex-start}
+.price{font:800 2rem Manrope;color:var(--a)}.price small{font-size:.9rem;color:var(--mu);font-weight:600}
+ul.ck{padding-left:18px;color:var(--mu);margin:0 0 1rem}.note{font-size:.88rem;color:var(--mu)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px}@media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px}.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--a);color:#06101f;font-weight:800;margin-bottom:12px}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.fl button{background:transparent;color:var(--mu);border:1px solid var(--bd);border-radius:99px;padding:8px 16px;font:600 .9rem Manrope;cursor:pointer}.fl button[aria-pressed=true]{background:var(--a);color:#06101f;border-color:var(--a)}
+details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin-bottom:10px}summary{cursor:pointer;font-weight:700}details p{margin:.7rem 0 0}
+form{display:grid;gap:14px}label{font-weight:600;font-size:.92rem;display:grid;gap:6px}
+input,select,textarea{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:12px;padding:12px;font:inherit;width:100%}
+.two{display:grid;gap:14px}@media(min-width:700px){.two{grid-template-columns:1fr 1fr}}.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400}.chk input{width:auto;margin-top:5px}
+#msg{min-height:1.4em;color:var(--a2);font-weight:600}
+footer{border-top:1px solid var(--bd);padding:44px 0 28px;background:var(--bg2)}.fg{display:grid;gap:26px}@media(min-width:800px){.fg{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:6px}footer a{color:var(--mu);text-decoration:none}footer a:hover{color:var(--a2)}footer h3{font-size:1rem}
+dialog{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:20px;max-width:560px;width:calc(100% - 32px);padding:26px}dialog::backdrop{background:rgba(3,6,14,.75)}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}.orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}.orbs i{position:absolute;border-radius:50%;filter:blur(80px);opacity:.3;animation:fl 18s ease-in-out infinite alternate}.orbs i:nth-child(1){width:520px;height:520px;left:-140px;top:6%;background:#1b6fe0}.orbs i:nth-child(2){width:460px;height:460px;right:-160px;top:42%;background:#32BDF4;animation-delay:-6s}.orbs i:nth-child(3){width:420px;height:420px;left:30%;bottom:-180px;background:#5b3df5;opacity:.2;animation-delay:-11s}
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#32BDF4,#9fe6ff);z-index:30}
+.rv span{display:inline-block;opacity:0;transform:translateY(.7em) rotate(2deg);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i,0)*75ms + 150ms)}
+.lap{animation:bob 6s ease-in-out infinite}.ph{animation:bob 5s ease-in-out -2s infinite}.chip{animation:bob 7s ease-in-out -1s infinite}
+.th{position:relative;overflow:hidden}.th::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);transform:translateX(-100%);animation:sw 3.6s ease-in-out infinite}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}.rev.in{opacity:1;transform:none}.card.tl{transition:transform .08s linear,border-color .2s}
+.btn{transition:transform .2s,filter .2s,border-color .2s}.btn:hover{transform:translateY(-2px)}
+.shot{position:relative;border:1px solid var(--bd);border-radius:12px;overflow:hidden;margin-bottom:14px;aspect-ratio:16/10;background:var(--bg)}.shot .sb{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;gap:5px;padding:8px 10px;background:rgba(8,13,27,.72)}.sb i{width:7px;height:7px;border-radius:50%;background:var(--a);opacity:.6}.shot .th{position:absolute;inset:0;height:auto;margin:0;border-radius:0}.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s cubic-bezier(.2,.8,.2,1)}.card:hover .shot img{transform:scale(1.07)}
+.card{position:relative;overflow:hidden}.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(50,189,244,.16),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}.card:hover::before{opacity:1}
+.mq{overflow:hidden;border-block:1px solid var(--bd);padding:14px 0;background:rgba(14,23,41,.6);position:relative;z-index:1}.mq div{display:flex;gap:44px;width:max-content;animation:mq 30s linear infinite;font:700 1.05rem Outfit,sans-serif;color:var(--a2);white-space:nowrap}.mq span::before{content:"✦";margin-right:44px;color:var(--a)}@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes sh{to{background-position:300% 0}}@keyframes up{to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(-12px)}}@keyframes sw{60%,100%{transform:translateX(100%)}}@keyframes fl{to{transform:translate(70px,-60px) scale(1.18)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv span{opacity:1;transform:none}.hl{-webkit-text-fill-color:var(--a)}}
+</style></head><body><canvas id="bg" aria-hidden="true"></canvas><div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div><div id="pg"></div>
+<header><div class="w nav"><a href="#home" aria-label="Websenx home"><img src="images/logo.png" alt="Websenx"></a>
+<nav id="nav" aria-label="Main"><button id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul id="menu"><li><a href="#home">Home</a></li><li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#products">Products</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li><li><a class="pill" href="#contact">Contact</a></li></ul></nav></div></header>
+<main>
+<section id="home" class="w hero"><div>
+<h1 class="rv" aria-label="Building Websites, Apps & Games That Make Ideas Real."><span>Building</span> <span class="hl">Websites,</span> <span class="hl">Apps</span> <span class="hl">&amp;</span> <span class="hl">Games</span> <span>That</span> <span>Make</span> <span>Ideas</span> <span>Real.</span></h1>
+<p>Websenx creates modern websites, web applications, interactive games and digital tools designed around your goals. From polished business websites to custom browser experiences, we combine creative design with practical functionality.</p>
+<div class="row"><button class="btn" data-open="General Project Enquiry">Start a Project</button><a class="btn s" href="#products">See Our Work</a></div>
+<ul class="tags"><li>Responsive Design</li><li>Performance-Focused</li><li>Tailored Solutions</li></ul></div>
+<div class="vis" aria-hidden="true"><div class="lap"><div class="b"><i></i><i></i><i></i></div><div class="c"><img src="images/logo.png" alt=""><div class="bar x"></div><div class="bar"></div><div class="bar" style="width:70%"></div><div class="g" style="grid-template-columns:1fr 1fr;margin-top:14px"><div class="th" style="height:62px;margin:0"></div><div class="th" style="height:62px;margin:0;background:var(--bd)"></div></div></div></div>
+<div class="ph"><div class="bar x" style="width:60%"></div><div class="bar"></div><div class="th" style="height:60px;margin:8px 0"></div><div class="bar"></div></div><div class="chip">Building Digital Experiences That Matter</div></div></section>
+
+<div class="mq" aria-hidden="true"><div><span>Responsive Websites</span><span>Landing Pages</span><span>Browser Games</span><span>Web Tools</span><span>Web Apps</span><span>Redesigns</span><span>Clean Code</span><span>Responsive Websites</span><span>Landing Pages</span><span>Browser Games</span><span>Web Tools</span><span>Web Apps</span><span>Redesigns</span><span>Clean Code</span></div></div>
+<section id="work" class="alt"><div class="w"><h2>Why choose <span class="hl">Websenx</span>?</h2><p class="sub">Real work, honest scopes and direct contact with the developer.</p>
+<div class="g t"><div class="card"><h3>Responsive by default</h3><p>Every layout is checked on phones, tablets and desktops.</p></div><div class="card"><h3>Clear project scopes</h3><p>Deliverables, cost and milestones are agreed before development begins.</p></div><div class="card"><h3>Direct communication</h3><p>You talk to the person building your project. No middlemen.</p></div></div></div></section>
+
+<section id="services" class="w"><h2>What We <span class="hl">Build</span></h2><p class="sub">Practical digital solutions designed to help your ideas move forward.</p><div class="g t" id="sv"></div></section>
+
+<section id="products" class="alt"><div class="w"><h2>Our Digital <span class="hl">Projects</span></h2><p class="sub">Explore tools and interactive experiences developed under the Websenx founder’s project portfolio. These are personal projects, not paid client work.</p><div class="g t" id="pr"></div></div></section>
+
+
+
+
+<section class="alt"><div class="w"><h2>From Idea to <span class="hl">Launch</span></h2><p class="sub">No fixed delivery times are promised before your requirements are understood.</p>
+<ol class="steps"><li><h3>Share Your Idea</h3><p>Describe the project, features, budget and timeline.</p></li><li><h3>Define the Scope</h3><p>We confirm deliverables, estimated cost, milestones and responsibilities first.</p></li><li><h3>Design and Development</h3><p>Your project is built, tested and presented for review.</p></li><li><h3>Launch and Support</h3><p>After approval and payment as agreed, it goes live and agreed support begins.</p></li></ol>
+<div class="row"><button class="btn" data-open="General Project Enquiry">Start Your Project</button></div></div></section>
+
+
+
+
+
+
+<section id="about" class="alt"><div class="w"><h2>A Developer Focused on <span class="hl">Useful Digital Experiences</span></h2>
+<p>I’m Dev Tiwari, founder of Websenx. I work on websites, browser games and digital tools, combining AI-assisted development with hands-on customisation, testing and problem-solving.</p>
+<p>My goal is to turn ideas into clear, usable digital experiences that look professional and work reliably. Through projects such as Ved Games Production and Ved Tools, I continue to develop my practical skills in web design and development.</p></div></section>
+
+<section id="faq" class="w"><h2>Frequently Asked <span class="hl">Questions</span></h2><div id="fq"></div></section>
+
+<section id="contact" class="alt"><div class="w"><h2>Have an Idea? <span class="hl">Let’s Build It.</span></h2>
+<p class="sub">Tell us what you want to create. Share your requirements, preferred timeline and approximate budget, and we’ll review the project.</p>
+<p><strong>Dev Tiwari</strong> · India · <a href="mailto:devtiwari007dt@gmail.com" class="hl">devtiwari007dt@gmail.com</a></p>
+<form id="cf"><div class="two"><label>Full name *<input name="name" required autocomplete="name"></label><label>Email address *<input name="email" type="email" required autocomplete="email"></label></div>
+<div class="two"><label>Business or organisation<input name="org"></label><label>Service required *<select name="service" id="svs" required><option value="">Choose a service</option><option>General Project Enquiry</option><option>Website Development</option><option>Landing Page</option><option>Website Redesign</option><option>Browser Game Development</option><option>Web Application</option><option>Website Maintenance</option><option>Other</option></select></label></div>
+<div class="two"><label>Estimated budget<select name="budget"><option>Not sure yet</option><option>Under ₹2,500</option><option>₹2,500–₹5,000</option><option>₹5,000–₹10,000</option><option>₹10,000+</option></select></label><label>Preferred timeline<input name="time"></label></div>
+<label>Project description *<textarea name="desc" id="desc" rows="5" required></textarea></label>
+<label class="chk"><input type="checkbox" required> <span>I have read the <a href="#" data-pol class="hl">Privacy Policy</a>. *</span></label>
+<div class="row" style="margin:0"><button class="btn" type="submit">Send Project Enquiry</button><a class="btn s" href="mailto:devtiwari007dt@gmail.com">Email Directly</a><button class="btn s" type="button" id="rs">Reset Form</button></div>
+<div id="msg" role="status"></div><p class="note">This form opens your email app with the enquiry filled in. Nothing is stored on this website.</p></form></div></section>
+</main>
+<footer><div class="w"><div class="fg"><div><img src="images/logo.png" alt="Websenx" style="height:30px"><p style="margin-top:12px">Building digital experiences that matter.</p></div>
+<div><h3>Explore</h3><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#products">Products</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+<div><h3>Contact</h3><ul><li>Dev Tiwari</li><li><a href="mailto:devtiwari007dt@gmail.com">devtiwari007dt@gmail.com</a></li></ul></div>
+<div><h3>Legal</h3><ul><li><a href="#" data-pol>Privacy Policy</a></li></ul></div></div>
+<p class="note" style="margin-top:26px">© <span id="yr">2026</span> Websenx. All rights reserved.</p></div></footer>
+<dialog id="dl"><div id="dc"></div><div class="row" id="da"></div></dialog>
+<script>
+const $=s=>document.querySelector(s)||{style:{},classList:{toggle(){},remove(){}},setAttribute(){}},dl=$('#dl');
+const SV=[["Website Development","Modern, responsive websites for businesses, creators, professionals and startups.",["Responsive layouts","Landing pages and multi-page websites","Navigation and contact sections","Basic on-page SEO","Cross-device testing"],"Explore Website Development","Website Development"],
+["Landing Page Design","Focused landing pages for products, services, campaigns and personal brands.",["Hero sections","Feature highlights","Clear calls to action","Contact or enquiry forms","Mobile optimisation"],"Build My Landing Page","Landing Page"],
+["Website Redesign","Improve an existing website’s visual design, navigation, accessibility and mobile usability.",["Layout improvements","Typography and spacing updates","Responsive adjustments","Usability improvements","Basic performance checks"],"Redesign My Website","Website Redesign"],
+["Browser Game Development","Interactive browser games and lightweight gaming experiences built for the web.",["Game mechanics","Score systems and leaderboards where appropriate","Responsive controls","Menus and game-over screens"],"Create a Browser Game","Browser Game Development"],
+["Web Tools and Applications","Useful web-based tools that simplify tasks and provide practical functionality.",["Browser-based utilities","Interactive interfaces","Forms and dashboards","Frontend integrations; backend where required and supported"],"Discuss an Application","Web Application"],
+["Website Maintenance","Optional ongoing support for small website updates, troubleshooting and technical checks.",["Agreed content updates","Broken-link checks","Basic functionality checks","Small design adjustments","Deployment assistance"],"Ask About Maintenance","Website Maintenance"]];
+const PR=[{i:"images/ved-games.png",t:"Ved Games Production",c:"Games",s:"Project details only",d:"A collection of browser games and interactive gaming experiences.",x:"Browser games and interactive experiences. A public games link will be added once confirmed."},
+{i:"images/ved-tools.png",t:"Ved Tools Image Compressor",c:"Tools",s:"Live",u:"https://devtiwari-bit.github.io/Image-Compressor-Ved-Tools/",d:"A browser-based image compression tool designed to help users reduce image file sizes.",x:"A browser-based tool for reducing image file sizes. Supported formats and results depend on the application itself."},
+{i:"images/ved-transfer.png",t:"Ved Transfer",c:"Applications",s:"In Development",u:"https://devtiwari-bit.github.io/ved-transfer-/",d:"A file-sharing project designed around sharing keys and a simple file-transfer workflow.",x:"A file-sharing project built around sharing keys. Features are still being completed and tested."}];
+const PK=[["Starter Website","₹2,499","",["One-page layout","Responsive design","About, services and contact sections","Basic on-page SEO","One agreed revision round"],"Choose Starter"],["Business Website","₹5,999","",["Up to five agreed pages","Responsive design","Service and contact sections","Basic on-page SEO","Two agreed revision rounds"],"Choose Business"],["Custom Project","₹9,999","",["Custom scope and feature planning","Custom UI","Development and testing","Agreed integrations","Milestone-based delivery"],"Request a Custom Quote"]];
+const MP=[["Basic Care","₹499",["One small content or text update","Basic website availability check","Monthly link and functionality check"]],["Growth Care","₹999",["Up to two small agreed updates","Monthly functionality checks","Basic technical troubleshooting"]],["Priority Care","₹1,499",["Up to four small agreed updates","Monthly technical checks","Priority scheduling within stated business hours"]]];
+const FQ=[["What does Websenx do?","Websenx offers website development, landing pages, website redesign, browser game development, web tools and optional maintenance."],["How do I start a project?","Use the Start a Project button or email devtiwari007dt@gmail.com with your requirements."],["How much does a website cost?","Pricing depends on the required pages, design, functionality, integrations and hosting needs. Published package prices are starting estimates."],["How long does development take?","The timeline depends on the project scope, availability of content and feedback, and technical requirements. A timeline is confirmed after reviewing the project."],["Do you provide hosting?","Hosting can be arranged or recommended according to the project. Availability, limits and charges are explained before the project starts."],["Can I request changes?","Yes. Revisions are handled according to the agreed package or proposal. Additional work may require a separate fee."],["Do you offer maintenance?","Optional maintenance plans may be available for eligible projects. Scope, limits and cancellation terms are agreed in advance."],["Can you create a custom web application?","Custom applications can be assessed based on the required features, backend, database, integrations, security and budget."],["Do you guarantee Google rankings?","No. SEO improvements can help search engines understand a website, but rankings and traffic cannot be guaranteed."],["How can I contact Websenx?","Email devtiwari007dt@gmail.com or use the project enquiry form."]];
+const li=a=>'<ul class="ck">'+a.map(i=>'<li>'+i+'</li>').join('')+'</ul>';
+const ini=t=>t.split(' ').map(w=>w[0]).slice(0,2).join('');
+$('#sv').innerHTML=SV.map((s,i)=>`<article class="card"><h3>${s[0]}</h3><p>${s[1]}</p><div class="row"><button class="btn s" data-sv="${i}">${s[3]}</button></div></article>`).join('');
+const pc=(p,i)=>`<article class="card" data-c="${p.c}"><div class="shot"><div class="sb"><i></i><i></i><i></i></div><div class="th">${ini(p.t)}</div><img src="${p.i}" alt="${p.t} screenshot" loading="lazy" onerror="this.remove()"></div><span class="st">${p.s}</span><h3>${p.t}</h3><p>${p.d}</p><div class="row">${p.u?`<a class="btn" href="${p.u}" target="_blank" rel="noopener noreferrer">${p.c=='Tools'?'Open Tool':'View Project'}</a>`:''}<button class="btn s" data-pd="${i}">Project Details</button></div></article>`;
+$('#pr').innerHTML=PR.map(pc).join('');
+$('#pf').innerHTML=PR.map(pc).join('');
+const cats=["All Projects","Websites","Games","Tools","Applications"];
+$('#fl').innerHTML=cats.map((c,i)=>`<button aria-pressed="${i==0}" data-f="${c}">${c}</button>`).join('');
+$('#pk').innerHTML=PK.map(p=>`<article class="card"><h3>${p[0]}</h3><div class="price">${p[1]} <small>starting</small></div>${li(p[3])}<button class="btn" data-pk="${p[0]}">${p[4]}</button></article>`).join('');
+$('#mp').innerHTML=MP.map(p=>`<article class="card"><h3>${p[0]}</h3><div class="price">${p[1]}<small>/month</small></div>${li(p[2])}<button class="btn s" data-pk="${p[0]}">Choose ${p[0]}</button></article>`).join('');
+$('#fq').innerHTML=FQ.map(q=>`<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join('');
+$('#yr').textContent=new Date().getFullYear();
+function openC(svc,note){dl.close&&dl.open&&dl.close();$('#svs').value=svc||'';if(note)$('#desc').value='Selected: '+note+'\n\n';$('#contact').scrollIntoView();setTimeout(()=>$('#desc').focus({preventScroll:true}),500)}
+function show(h,acts){$('#dc').innerHTML=h;$('#da').innerHTML='';(acts||[]).concat([['Close',()=>dl.close(),1]]).forEach(a=>{const b=document.createElement(a[0]=='LINK'?'a':'button');b.className='btn'+(a[2]?' s':'');b.textContent=a[0];b.onclick=a[1];$('#da').appendChild(b)});dl.showModal()}
+document.addEventListener('click',e=>{const t=e.target.closest('button,a');if(!t)return;
+if(t.dataset.open!==undefined)openC(t.dataset.open);
+if(t.dataset.sv!==undefined){const s=SV[t.dataset.sv];if(!s[4]){dl.close();return $('#pricing').scrollIntoView()}show(`<h2>${s[0]}</h2><p>${s[1]}</p>${li(s[2])}`,[['Start a Project Enquiry',()=>openC(s[4])]])}
+if(t.dataset.pd!==undefined){const p=PR[t.dataset.pd];show(`<span class="st">${p.s}</span><h2>${p.t}</h2><p>${p.x}</p><p class="note">Category: ${p.c}. A personal project, not paid client work.</p>`,p.u?[['Open Project',()=>window.open(p.u,'_blank','noopener')]]:[])}
+if(t.dataset.pk){const n=t.dataset.pk;openC(/Care/.test(n)?'Website Maintenance':n=='Custom Project'?'Other':'Website Development',n)}
+if(t.dataset.f){let n=0;document.querySelectorAll('#fl button').forEach(b=>b.setAttribute('aria-pressed',b==t));document.querySelectorAll('#pf .card').forEach(c=>{const ok=t.dataset.f=='All Projects'||c.dataset.c==t.dataset.f;c.hidden=!ok;if(ok)n++});$('#em').hidden=n>0}
+if(t.hasAttribute('data-pol')){e.preventDefault();show(`<h2>Privacy Policy</h2><p>Websenx is operated by Dev Tiwari. If you send an enquiry, we receive the details you choose to share, such as your name, email address and project description, through your own email app. We use them only to reply to you and discuss your project. This website does not run analytics or advertising, and nothing from the form is stored here. We do not sell your information. To ask about or delete your data, email devtiwari007dt@gmail.com.</p><p class="note">Draft policy. Update it if you add analytics, a form service or hosting that collects data.</p>`)}});
+$('#mb').onclick=()=>{const n=$('#nav'),o=n.classList.toggle('open');$('#mb').setAttribute('aria-expanded',o)};
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{$('#nav').classList.remove('open');$('#mb').setAttribute('aria-expanded',false)}));
+$('#rs').onclick=()=>{if(confirm('Clear the form?')){$('#cf').reset();$('#msg').textContent=''}};
+$('#cf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),g=k=>f.get(k)||'-';
+const b=`Name: ${g('name')}\nEmail: ${g('email')}\nOrganisation: ${g('org')}\nService: ${g('service')}\nBudget: ${g('budget')}\nTimeline: ${g('time')}\n\n${g('desc')}`;
+location.href='mailto:devtiwari007dt@gmail.com?subject='+encodeURIComponent('Project enquiry: '+g('service'))+'&body='+encodeURIComponent(b);
+$('#msg').textContent='Your email app should open with the enquiry ready to send. If it does not, use Email Directly.'};
+const rm2=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('.rv span').forEach((s,i)=>s.style.setProperty('--i',i));
+(()=>{const c=document.getElementById('bg'),x=c.getContext('2d');let W=0,H=0,N=[],m={x:-999,y:-999};
+function rs(){const d=Math.min(devicePixelRatio||1,2);if(innerWidth===W&&N.length)return;W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);const n=Math.min(80,Math.round(W*H/16000));N=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+function f(){x.clearRect(0,0,W,H);if(!rm2)for(const p of N){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+for(let i=0;i<N.length;i++){const a=N[i];x.fillStyle='rgba(120,217,255,.7)';x.beginPath();x.arc(a.x,a.y,1.8,0,6.283);x.fill();for(let j=i+1;j<N.length;j++){const b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<140){x.strokeStyle='rgba(50,189,244,'+(.22*(1-d/140))+')';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+const dm=Math.hypot(a.x-m.x,a.y-m.y);if(dm<170){x.strokeStyle='rgba(120,217,255,'+(.5*(1-dm/170))+')';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(m.x,m.y);x.stroke()}}
+if(!rm2)requestAnimationFrame(f)}
+rs();addEventListener('resize',rs);addEventListener('pointermove',e=>{m.x=e.clientX;m.y=e.clientY});f()})();
+if(!rm2&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;io.unobserve(t);t.classList.add('in');setTimeout(()=>{t.classList.remove('rev','in');t.style.transitionDelay=''},1400)}),{threshold:.12});
+document.querySelectorAll('main h2,main .sub,.card,.steps li,details').forEach(t=>{t.classList.add('rev');const i=[...t.parentElement.children].indexOf(t);t.style.transitionDelay=Math.min(i,5)*90+'ms';io.observe(t)})}
+if(matchMedia('(hover:hover)').matches&&!rm2)document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.card');document.querySelectorAll('.card.tl').forEach(o=>{if(o!==c){o.classList.remove('tl');o.style.transform=''}});if(!c)return;const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;c.classList.add('tl');c.style.setProperty('--mx',(px+.5)*100+'%');c.style.setProperty('--my',(py+.5)*100+'%');c.style.transform='perspective(800px) rotateX('+(-py*6)+'deg) rotateY('+(px*6)+'deg) translateY(-4px)'});
+addEventListener('scroll',()=>{$('#pg').style.width=(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+const lt=new Image();lt.onload=()=>document.querySelectorAll('header img,footer img,.lap img').forEach(i=>i.src='images/logo.png');lt.src='images/logo.png';
+</script></body></html>
